@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Pétalos
         const gradient_lady = ctx.createLinearGradient(0, 0, 0, canvas.height);
-        gradient_lady.addColorStop(0, "#ff7eb3"); // Celeste claro
-        gradient_lady.addColorStop(1, "#f9e79f "); // Blanco
+        gradient_lady.addColorStop(0, "white"); // Celeste claro
+        gradient_lady.addColorStop(1, "#fcf3cf "); // Blanco
         ctx.fillStyle = gradient_lady;
         for (let i = 0; i < 8; i++) {
             const angle = (i / 8) * Math.PI * 2;
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Dibujar y mover corazones de lluvia
         hearts.forEach((heart, index) => {
             heart.y += heart.speedY;
-            drawHeart(ctx, heart.x, heart.y, heart.size, heart.color);
+            drawHeart(ctx, heart.x, heart.y, heart.size, "#c9184a");
 
             if (heart.y > canvas.height) {
                 hearts.splice(index, 1);
