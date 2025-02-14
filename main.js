@@ -59,7 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
         ctx.fill();
 
         // Pétalos
-        ctx.fillStyle = "white";
+        const gradient_lady = ctx.createLinearGradient(0, 0, 0, canvas.height);
+        gradient_lady.addColorStop(0, "#ff7eb3"); // Celeste claro
+        gradient_lady.addColorStop(1, "#f9e79f "); // Blanco
+        ctx.fillStyle = gradient_lady;
         for (let i = 0; i < 8; i++) {
             const angle = (i / 8) * Math.PI * 2;
             const petalX = x + Math.cos(angle) * size;
@@ -73,8 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Dibujar el fondo (degradado de cielo)
     function drawBackground() {
         const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-        gradient.addColorStop(0, "#87CEEB"); // Celeste claro
-        gradient.addColorStop(1, "#FFD6E0"); // Blanco
+        gradient.addColorStop(0, "#ff7eb3"); // Celeste claro
+        gradient.addColorStop(1, "#f9e79f "); // Blanco
         ctx.fillStyle = gradient;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
@@ -151,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Generar margaritas en posiciones aleatorias
     function generateDaisies() {
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 25; i++) {
             daisies.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
