@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
             explosion.x += explosion.speedX;
             explosion.y += explosion.speedY;
             explosion.opacity -= 0.02;
-            drawDaisy(ctx,explosion.x * 1.5, explosion.y * 1.5,explosion.size);
+            drawDaisy(ctx, explosion.x * 1.5, explosion.y * 1.5, explosion.size);
             if (explosion.opacity <= 0) {
                 explosions.splice(index, 1);
             }
